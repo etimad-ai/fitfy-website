@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FitFy - Smart Nutrition Tracking & Meal Planning</title>
+    <title>FitFy - Fitness for You</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <!-- Added Modern Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         .gradient-bg {
             background: linear-gradient(135deg, #22c55e 0%, #0ea5e9 100%);
@@ -23,16 +25,31 @@
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(12px);
         }
+        /* Custom Typography */
+        .font-display {
+            font-family: 'Outfit', sans-serif;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Tagline Animation */
+        .tagline {
+            letter-spacing: -0.02em;
+        }
     </style>
 </head>
-<body class="font-sans antialiased">
+<body class="antialiased">
     <main class="gradient-bg min-h-screen text-white">
         <!-- Header -->
         <header class="fixed top-0 left-0 right-0 glass-bg z-10">
             <nav class="container mx-auto px-6 py-4">
-                <h1 class="text-2xl sm:text-3xl font-bold">FitFy</h1>
+                <div class="flex flex-col">
+                    <h1 class="font-display text-2xl sm:text-3xl font-bold tracking-tight">FitFy</h1>
+                    <p class="text-xs sm:text-sm text-white/80 tagline">Fitness for You</p>
+                </div>
             </nav>
         </header>
+        
 
         <!-- Main Content -->
         <div class="container mx-auto px-6">
@@ -42,12 +59,12 @@
                     <!-- Left Column -->
                     <div class="space-y-8">
                         <div class="space-y-4">
-                            <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+                            <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
                                 AI-Powered<br>
                                 Nutrition Made<br>
                                 Simple
                             </h2>
-                            <p class="text-xl text-white/90 max-w-lg">
+                            <p class="text-xl text-white/90 max-w-lg font-light">
                                 Track nutrition & get personalized meal recommendations instantly
                             </p>
                         </div>
@@ -62,8 +79,8 @@
                                         </svg>
                                     </div>
                                     <div>
-                                        <h3 class="text-lg font-semibold mb-2">Smart Tracking</h3>
-                                        <p class="text-white/80">Text, photo, or voice input for instant nutrition analysis</p>
+                                        <h3 class="font-display text-lg font-semibold mb-2">Smart Tracking</h3>
+                                        <p class="text-white/80 text-sm leading-relaxed">Text, photo, or voice input for instant nutrition analysis</p>
                                     </div>
                                 </div>
                             </div>
@@ -75,8 +92,8 @@
                                         </svg>
                                     </div>
                                     <div>
-                                        <h3 class="text-lg font-semibold mb-2">AI Recommendations</h3>
-                                        <p class="text-white/80">Personalized meal suggestions based on your goals</p>
+                                        <h3 class="font-display text-lg font-semibold mb-2">AI Recommendations</h3>
+                                        <p class="text-white/80 text-sm leading-relaxed">Personalized meal suggestions based on your goals</p>
                                     </div>
                                 </div>
                             </div>
@@ -91,14 +108,14 @@
 
                 <!-- Download Section -->
                 <div class="mt-20 text-center">
-                    <h3 class="text-2xl sm:text-3xl font-semibold mb-6">Ready to Start Your Journey?</h3>
+                    <h3 class="font-display text-2xl sm:text-3xl font-semibold mb-6">Ready to Start Your Journey?</h3>
                     <a href="#" class="inline-flex items-center bg-white text-green-600 px-8 py-4 rounded-full font-semibold hover-scale gap-3 text-lg">
                         <svg class="w-7 h-7" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M17.721 1.599c-.109.089-2.167 1.287-4.573 2.663-2.405 1.376-4.394 2.507-4.419 2.513-.024.006-.048-1.21-.052-2.702L8.672 1.37 8.447 1.599c-.124.124-.226.238-.226.253 0 .015-.476.864-1.058 1.886-.582 1.022-1.058 1.874-1.058 1.893 0 .02-.19.361-.423.758-.232.398-.423.736-.423.752 0 .016-.397.716-.882 1.555-.485.84-.882 1.547-.882 1.572 0 .025-.185.349-.411.72-.226.37-.421.7-.433.732-.037.096 8.134 14.821 8.271 14.91.098.064.34.064.438 0 .136-.089 8.307-14.814 8.271-14.91-.012-.032-.207-.362-.433-.732-.226-.371-.411-.695-.411-.72 0-.025-.397-.732-.882-1.572-.485-.839-.882-1.539-.882-1.555 0-.016-.191-.354-.423-.752-.233-.397-.423-.738-.423-.758 0-.019-.476-.871-1.058-1.893-.582-1.022-1.058-1.871-1.058-1.886 0-.015-.101-.129-.226-.253l-.225-.229-.005 2.702c-.003 1.487-.024 2.703-.048 2.702-.024-.001-2.01-1.132-4.413-2.513-2.404-1.381-4.421-2.529-4.483-2.551-.105-.037-.121-.029-.225.121-.063.091-.114.183-.114.204 0 .057 9.215 5.397 9.53 5.52.293.115.772.115 1.065 0 .315-.123 9.53-5.463 9.53-5.52 0-.021-.052-.113-.114-.204-.104-.15-.119-.158-.225-.121-.062.022-2.079 1.17-4.483 2.551z"/>
                         </svg>
                         Download on App Store
                     </a>
-                    <p class="mt-6 text-white/60 text-sm">Available for iPhone and iPad</p>
+                    <p class="mt-6 text-white/60 text-sm font-light">Available for iPhone and iPad</p>
                 </div>
             </section>
         </div>
@@ -106,7 +123,7 @@
         <!-- Footer -->
         <footer class="border-t border-white/10">
             <div class="container mx-auto px-6 py-8 text-center text-white/60">
-                <p>© 2024 FitFy. All rights reserved.</p>
+                <p class="text-sm">© 2024 FitFy. All rights reserved.</p>
             </div>
         </footer>
     </main>
