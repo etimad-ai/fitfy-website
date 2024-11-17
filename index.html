@@ -15,103 +15,111 @@
         .hover-scale:hover {
             transform: scale(1.05);
         }
+        /* Mobile-specific styles */
+        @media (max-width: 768px) {
+            .nav-button {
+                font-size: 0.875rem;
+                padding: 0.5rem 1rem;
+            }
+        }
     </style>
 </head>
 <body class="font-sans antialiased">
     <!-- Hero Section -->
     <header class="min-h-screen flex items-center gradient-bg text-white">
-        <div class="container mx-auto px-6 py-24">
-            <nav class="flex justify-between items-center mb-16">
-                <h1 class="text-3xl font-bold">FitFy</h1>
-                <a href="#download" class="bg-white text-green-600 px-6 py-2 rounded-full hover:bg-opacity-90 transition-colors">
+        <div class="container mx-auto px-4 sm:px-6 py-12 sm:py-24">
+            <nav class="flex justify-between items-center mb-8 sm:mb-16">
+                <h1 class="text-2xl sm:text-3xl font-bold">FitFy</h1>
+                <a href="#download" class="nav-button bg-white text-green-600 px-4 sm:px-6 py-2 rounded-full hover:bg-opacity-90 transition-colors">
                     Download Now
                 </a>
             </nav>
             
             <div class="flex flex-col md:flex-row items-center justify-between">
-                <div class="md:w-1/2 mb-12 md:mb-0">
-                    <h2 class="text-5xl font-bold mb-6">
+                <div class="w-full md:w-1/2 mb-8 md:mb-0 text-center md:text-left">
+                    <h2 class="text-4xl sm:text-5xl font-bold mb-4 sm:mb-6 leading-tight">
                         AI-Powered<br>
                         Nutrition Made<br>
                         Simple
                     </h2>
-                    <p class="text-xl mb-8 text-white/90">
+                    <p class="text-lg sm:text-xl mb-6 sm:mb-8 text-white/90 max-w-xl mx-auto md:mx-0">
                         Track your nutrition instantly with text, photos, or voice. Get personalized meal recommendations powered by AI.
                     </p>
-                    <div class="flex gap-4">
-                        <a href="#download" class="bg-white text-green-600 px-8 py-3 rounded-full font-semibold hover-scale inline-block">
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                        <a href="#download" class="w-full sm:w-auto bg-white text-green-600 px-8 py-3 rounded-full font-semibold hover-scale inline-block text-center">
                             Download Now
                         </a>
-                        <a href="#features" class="border border-white px-8 py-3 rounded-full font-semibold hover-scale inline-block">
+                        <a href="#features" class="w-full sm:w-auto border border-white px-8 py-3 rounded-full font-semibold hover-scale inline-block text-center">
                             Learn More
                         </a>
                     </div>
                 </div>
-                <div class="md:w-1/2 flex justify-center">
-                    <img src="600.png" alt="FitFy App Interface" class="rounded-3xl shadow-2xl"/>
+                <div class="w-full md:w-1/2 flex justify-center px-4 sm:px-0">
+                    <img src="600.png" alt="FitFy App Interface" class="rounded-3xl shadow-2xl max-w-xs sm:max-w-sm"/>
                 </div>
             </div>
         </div>
     </header>
 
     <!-- Features Section -->
-    <section id="features" class="py-24 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-16">Effortless Nutrition Tracking</h2>
-            <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
-                <div class="p-8 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <section id="features" class="py-16 sm:py-24 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 sm:mb-16">Effortless Nutrition Tracking</h2>
+            <div class="grid md:grid-cols-2 gap-6 sm:gap-12 max-w-4xl mx-auto">
+                <div class="p-6 sm:p-8 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 sm:w-16 h-12 sm:h-16 bg-green-100 rounded-full flex items-center justify-center mb-4 sm:mb-6">
+                        <svg class="w-6 sm:w-8 h-6 sm:h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-semibold mb-4">Smart Nutrition Tracking</h3>
-                    <ul class="space-y-3 text-gray-600">
+                    <h3 class="text-xl sm:text-2xl font-semibold mb-4">Smart Nutrition Tracking</h3>
+                    <ul class="space-y-3 text-gray-600 text-sm sm:text-base">
                         <li class="flex items-center">
-                            <svg class="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-5 h-5 mr-2 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                             </svg>
-                            Type, snap, or speak your meals
+                            <span>Type, snap, or speak your meals</span>
                         </li>
                         <li class="flex items-center">
-                            <svg class="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-5 h-5 mr-2 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                             </svg>
-                            AI analyzes nutritional content instantly
+                            <span>AI analyzes nutritional content instantly</span>
                         </li>
                         <li class="flex items-center">
-                            <svg class="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-5 h-5 mr-2 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                             </svg>
-                            Track calories, protein, fats & carbs
+                            <span>Track calories, protein, fats & carbs</span>
                         </li>
                     </ul>
                 </div>
-                <div class="p-8 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <!-- Second feature card with similar mobile optimizations -->
+                <div class="p-6 sm:p-8 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 sm:w-16 h-12 sm:h-16 bg-green-100 rounded-full flex items-center justify-center mb-4 sm:mb-6">
+                        <svg class="w-6 sm:w-8 h-6 sm:h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-semibold mb-4">Smart Meal Recommendations</h3>
-                    <ul class="space-y-3 text-gray-600">
+                    <h3 class="text-xl sm:text-2xl font-semibold mb-4">Smart Meal Recommendations</h3>
+                    <ul class="space-y-3 text-gray-600 text-sm sm:text-base">
                         <li class="flex items-center">
-                            <svg class="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-5 h-5 mr-2 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                             </svg>
-                            Personalized to your preferences
+                            <span>Personalized to your preferences</span>
                         </li>
                         <li class="flex items-center">
-                            <svg class="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-5 h-5 mr-2 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                             </svg>
-                            Based on your daily nutritional needs
+                            <span>Based on your daily nutritional needs</span>
                         </li>
                         <li class="flex items-center">
-                            <svg class="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-5 h-5 mr-2 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                             </svg>
-                            Adapts to your dietary goals
+                            <span>Adapts to your dietary goals</span>
                         </li>
                     </ul>
                 </div>
@@ -120,51 +128,51 @@
     </section>
 
     <!-- How It Works Section -->
-    <section class="py-24">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-16">How It Works</h2>
-            <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+    <section class="py-16 sm:py-24">
+        <div class="container mx-auto px-4 sm:px-6">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 sm:mb-16">How It Works</h2>
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
                 <div class="text-center">
-                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6 mx-auto">
-                        <span class="text-2xl font-bold text-green-600">1</span>
+                    <div class="w-12 sm:w-16 h-12 sm:h-16 bg-green-100 rounded-full flex items-center justify-center mb-4 sm:mb-6 mx-auto">
+                        <span class="text-xl sm:text-2xl font-bold text-green-600">1</span>
                     </div>
-                    <h3 class="text-xl font-semibold mb-4">Log Your Meal</h3>
-                    <p class="text-gray-600">Type, take a photo, or use voice to log what you're eating</p>
+                    <h3 class="text-lg sm:text-xl font-semibold mb-2 sm:mb-4">Log Your Meal</h3>
+                    <p class="text-sm sm:text-base text-gray-600">Type, take a photo, or use voice to log what you're eating</p>
                 </div>
                 <div class="text-center">
-                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6 mx-auto">
-                        <span class="text-2xl font-bold text-green-600">2</span>
+                    <div class="w-12 sm:w-16 h-12 sm:h-16 bg-green-100 rounded-full flex items-center justify-center mb-4 sm:mb-6 mx-auto">
+                        <span class="text-xl sm:text-2xl font-bold text-green-600">2</span>
                     </div>
-                    <h3 class="text-xl font-semibold mb-4">AI Analysis</h3>
-                    <p class="text-gray-600">Our AI instantly calculates all nutritional values</p>
+                    <h3 class="text-lg sm:text-xl font-semibold mb-2 sm:mb-4">AI Analysis</h3>
+                    <p class="text-sm sm:text-base text-gray-600">Our AI instantly calculates all nutritional values</p>
                 </div>
                 <div class="text-center">
-                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6 mx-auto">
-                        <span class="text-2xl font-bold text-green-600">3</span>
+                    <div class="w-12 sm:w-16 h-12 sm:h-16 bg-green-100 rounded-full flex items-center justify-center mb-4 sm:mb-6 mx-auto">
+                        <span class="text-xl sm:text-2xl font-bold text-green-600">3</span>
                     </div>
-                    <h3 class="text-xl font-semibold mb-4">Get Recommendations</h3>
-                    <p class="text-gray-600">Receive personalized meal suggestions for your next meal</p>
+                    <h3 class="text-lg sm:text-xl font-semibold mb-2 sm:mb-4">Get Recommendations</h3>
+                    <p class="text-sm sm:text-base text-gray-600">Receive personalized meal suggestions for your next meal</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Download Section -->
-    <section id="download" class="py-24 bg-gray-50">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold mb-8">Start Your Journey Today</h2>
-            <p class="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
+    <section id="download" class="py-16 sm:py-24 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4 sm:mb-8">Start Your Journey Today</h2>
+            <p class="text-lg sm:text-xl text-gray-600 mb-8 sm:mb-12 max-w-2xl mx-auto">
                 Join thousands of users who have simplified their nutrition tracking with FitFy.
             </p>
-            <a href="#" class="inline-block bg-green-600 text-white px-12 py-4 rounded-full font-semibold hover-scale">
+            <a href="#" class="inline-block bg-green-600 text-white px-8 sm:px-12 py-3 sm:py-4 rounded-full font-semibold hover-scale text-base sm:text-lg w-full sm:w-auto">
                 Download on the App Store
             </a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-12">
-        <div class="container mx-auto px-6 text-center text-gray-600">
+    <footer class="py-8 sm:py-12">
+        <div class="container mx-auto px-4 sm:px-6 text-center text-gray-600 text-sm sm:text-base">
             <p>© 2024 FitFy. All rights reserved.</p>
         </div>
     </footer>
