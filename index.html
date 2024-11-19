@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FitFY - fitness for you</title>
+    <title>FITfy - fitness for you</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -14,7 +14,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.20.12/babel.min.js"></script>
     <style>
         .gradient-bg {
-            background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+            background: linear-gradient(135deg, #065f46 0%, #064e3b 50%, #064e3b 100%);
         }
         
         .glass-bg {
@@ -48,7 +48,7 @@
         <header class="fixed top-0 left-0 right-0 glass-bg z-10">
             <div class="container mx-auto px-6 py-4">
                 <div class="flex flex-col">
-                    <h1 class="font-bold text-2xl sm:text-3xl tracking-tight">FitFY</h1>
+                    <h1 class="font-bold text-2xl sm:text-3xl tracking-tight">FITfy</h1>
                     <p class="text-sm text-white/80">fitness for you</p>
                 </div>
             </div>
@@ -134,8 +134,10 @@
             const [currentIndex, setCurrentIndex] = React.useState(0);
             
             const images = [
-                "img_1.jpeg",
-                "img_2.jpeg"
+                "pic1.jpg",
+                "pic2.jpg",
+                "pic3.jpg",
+                "pic4.jpg",
             ];
             
             const nextSlide = () => {
